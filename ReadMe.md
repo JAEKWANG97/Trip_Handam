@@ -48,7 +48,8 @@
 
 ### Architecture
 
-![아키텍쳐 구성도](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbNFwpM%2FbtsJ17Aae4V%2FCKp290W72UZNlrfqi5jxH1%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbNFwpM%2FbtsJ17Aae4V%2FCKp290W72UZNlrfqi5jxH1%2Fimg.png" width="600" height="300" />
+
 
 
 ## 🤗 기능 소개
