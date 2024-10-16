@@ -97,7 +97,7 @@
 <li>맞춤여행지들이 추천되고, 핫플여행지, 지역별 여행지, 축제 정보등을 표시합니다.
 </li>
 
-### 개인 여행 성향별, 좋아요 별 맞춤 피드 추천
+### 개인 여행 유형별, 좋아요 한 피드별 맞춤 추천
 <img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/탐색피드.png?raw=true" width="500" height="250">
 
 <ul>
