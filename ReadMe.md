@@ -1,7 +1,11 @@
 # 🍳 여행한담
-
+<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/메인페이지.png?raw=true" width="500" height="250">
 ## 🗓️ 프로젝트 개요
+## 📢 서비스 소개
 
+[📎 서비스 소개 UCC](https://youtube.com/shorts/xfRjP9bi9n4)
+
+ **"여행한담"** 은 여행일정을 짜는데 도움을 주는 웹서비스입니다. 여행계획을 구성할 때, 정보의 과부화, 시간 소모 등 사용자의 피로를 덜어주기 위해 개발되었습니다. 가벼운 성향테스트를 통해 내 여행 성향을 파악할 수 있고, 다른 사용자의 피드 게시물을 보고 좋아요와 댓글 등의 소통을 할 수 있는 SNS 기능을 겸하고 있습니다. 좋아요를 누른 피드 데이터를 기반으로 사용하기 쉬운 여행 계획 수립 및 자동맞춤 여행일정 수립 기능을 보유하고 있습니다.
 ### 진행 기간
 
 - 2024.08.26 ~ 2024.10.11 (7주)
@@ -14,11 +18,7 @@
 | <img src="https://avatars.githubusercontent.com/u/156388715?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/156388917?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/156388848?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/87603324?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/65598179?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/134148399?v=4" width="100" height="100"> |
 | PM, FE | FE | FE | BE, Infra, AI | BE | BE |
 
-## 📢 서비스 소개
 
-[📎 서비스 소개 UCC](https://youtube.com/shorts/xfRjP9bi9n4)
-
- **"여행한담"** 은 여행일정을 짜는데 도움을 주는 웹서비스입니다. 여행계획을 구성할 때, 정보의 과부화, 시간 소모 등 사용자의 피로를 덜어주기 위해 개발되었습니다. 가벼운 성향테스트를 통해 내 여행 성향을 파악할 수 있고, 다른 사용자의 피드 게시물을 보고 좋아요와 댓글 등의 소통을 할 수 있는 SNS 기능을 겸하고 있습니다. 좋아요를 누른 피드 데이터를 기반으로 사용하기 쉬운 여행 계획 수립 및 자동맞춤 여행일정 수립 기능을 보유하고 있습니다.
 
 ## 🥳 서비스 설계
 
@@ -101,6 +101,12 @@
 <ul>
   <li>동행 구인글들을 확인할 수 있고 제 일정을 공유하면 동행 구인글을 작성할 수 있습니다.
   <li>게시된 게시물을 클릭하면 다른 사용자의 여행일정이 보입니다.
+</ul>
+
+### 1대1 채팅방
+<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/채팅방.png?raw=true" width="500" height="250">
+<ul>
+  <li> 내 팔로잉 목록의 사용자들과 1대1 채팅을 시작할 수 있습니다.
 </ul>
 
 ### 마이페이지
