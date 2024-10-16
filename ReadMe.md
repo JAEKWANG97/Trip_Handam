@@ -55,8 +55,8 @@
 
 ## 🤗 기능 소개
 ### 여행 성향 진단
-<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/여행설문.png?raw=true" width="300" height="500">
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb7HPhB%2FbtsJ102mgX5%2F29tjb6ZAS1DwrMWpfPnFA1%2Fimg.png" width="300" height="500"> |
+<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/여행설문.png?raw=true" width="300" height="500"> |
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb7HPhB%2FbtsJ102mgX5%2F29tjb6ZAS1DwrMWpfPnFA1%2Fimg.png" width="300" height="500">
 <br>
 <ul>
 <li>
