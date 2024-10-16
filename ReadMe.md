@@ -37,22 +37,19 @@
 
 ### ERD
 
-![ERD](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbiTDvs%2FbtsJ2uIzU9k%2F1pkZZWV6hMqXEmzdyayx30%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbiTDvs%2FbtsJ2uIzU9k%2F1pkZZWV6hMqXEmzdyayx30%2Fimg.png" width="600" height="300" />
 
 ### Wireframe
 
 [📎 Figma Link](https://www.figma.com/design/CCGP6nyPBqx6LpUE4uEP3M/%ED%94%8C%EB%A1%9C%EC%9A%B0%EC%B0%A8%ED%8A%B8?node-id=19-2&node-type=canvas&t=spQ9HQoCBojIyKx0-0)
 
-![화면설계](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvIZvK%2FbtsJ0et1JBG%2Fb7MOijr6SrEI9Y6DaysykK%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvIZvK%2FbtsJ0et1JBG%2Fb7MOijr6SrEI9Y6DaysykK%2Fimg.png" width="600" height="300" />
+
 
 ### Architecture
 
 ![아키텍쳐 구성도](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbNFwpM%2FbtsJ17Aae4V%2FCKp290W72UZNlrfqi5jxH1%2Fimg.png)
 
-### Docs
-
-[📎 API](https://versed-dragonfly-804.notion.site/API-f13725999d6049449807479bf6f0dddd)  
-[📎 기능 정의서](https://versed-dragonfly-804.notion.site/9a8edc1bf92f406fb69b82e39a47a72f?pvs=4)
 
 ## 🤗 기능 소개
 ### 여행 성향 진단
