@@ -4,6 +4,7 @@
 ## 📢 서비스 소개
 
  **"여행한담"** 은 여행일정을 짜는데 도움을 주는 웹서비스입니다. 여행계획을 구성할 때, 정보의 과부화, 시간 소모 등 사용자의 피로를 덜어주기 위해 개발되었습니다. 가벼운 성향테스트를 통해 내 여행 성향을 파악할 수 있고, 다른 사용자의 피드 게시물을 보고 좋아요와 댓글 등의 소통을 할 수 있는 SNS 기능을 겸하고 있습니다. 좋아요를 누른 피드 데이터를 기반으로 사용하기 쉬운 여행 계획 수립 및 자동맞춤 여행일정 수립 기능을 보유하고 있습니다.
+ 
  [📎 서비스 소개 UCC](https://youtube.com/shorts/xfRjP9bi9n4)
  
 ### 진행 기간
@@ -64,8 +65,8 @@
 </ul>
 
 ### 맞춤 및 지역별 여행지 추천정보
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9xjc2%2FbtsJ2mqqAbH%2FZQ0RFiaJw3UCc8PHpBs8g1%2Fimg.png" width="500" height="250"> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7gg2O%2FbtsJ1GC5sNQ%2FWjdcKNW11XxsX3G3UXXhc1%2Fimg.png" width="500" height="250">
-
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7gg2O%2FbtsJ1GC5sNQ%2FWjdcKNW11XxsX3G3UXXhc1%2Fimg.png" width="500" height="250">
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9xjc2%2FbtsJ2mqqAbH%2FZQ0RFiaJw3UCc8PHpBs8g1%2Fimg.png" width="500" height="250">
 <li>맞춤여행지들이 추천되고, 핫플여행지, 지역별 여행지, 축제 정보등을 표시합니다.
 </li>
 
