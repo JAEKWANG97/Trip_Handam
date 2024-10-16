@@ -55,9 +55,8 @@
 
 ## 🤗 기능 소개
 ### 여행 성향 진단
-
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb7HPhB%2FbtsJ102mgX5%2F29tjb6ZAS1DwrMWpfPnFA1%2Fimg.png" width="300" height="500"> |
 <img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/여행설문.png?raw=true" width="300" height="500">
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb7HPhB%2FbtsJ102mgX5%2F29tjb6ZAS1DwrMWpfPnFA1%2Fimg.png" width="300" height="500"> |
 <br>
 <ul>
 <li>
@@ -65,8 +64,8 @@
 </ul>
 
 ### 맞춤 및 지역별 여행지 추천정보
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7gg2O%2FbtsJ1GC5sNQ%2FWjdcKNW11XxsX3G3UXXhc1%2Fimg.png" width="500" height="250">
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9xjc2%2FbtsJ2mqqAbH%2FZQ0RFiaJw3UCc8PHpBs8g1%2Fimg.png" width="500" height="250">
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7gg2O%2FbtsJ1GC5sNQ%2FWjdcKNW11XxsX3G3UXXhc1%2Fimg.png" width="500" height="250">
 <li>맞춤여행지들이 추천되고, 핫플여행지, 지역별 여행지, 축제 정보등을 표시합니다.
 </li>
 
