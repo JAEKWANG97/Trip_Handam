@@ -1,5 +1,5 @@
 # 🍳 여행한담
-<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/메인페이지.png?raw=true" width="1000" height="700">>
+<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/메인페이지.png?raw=true" width="1000" height="500">>
 
 ## 🗓️ 프로젝트 개요
 
