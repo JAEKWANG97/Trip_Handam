@@ -167,7 +167,7 @@
       <li>부하 테스트: Locust를 사용하여 서버 부하 테스트를 수행하고 최적화를 진행했습니다.</li>
     </ul>
   </li>
-  <h4<li>포토카드 생성</h4>
+  <h4><li>포토카드 생성</h4>
     <ul>
       <li>BLIP image captioning, OWL-ViT zero-shot object detection, Pix2Pix image to image translation 모델을 활용해 사용자들이 올린 피드 이미지로 고유한 포토카드를 생성할 수 있도록 기능을 구현했습니다.</li>
     </ul>
