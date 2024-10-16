@@ -92,16 +92,22 @@
 </ul>
 
 ### 맞춤 및 지역별 여행지 추천정보
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9xjc2%2FbtsJ2mqqAbH%2FZQ0RFiaJw3UCc8PHpBs8g1%2Fimg.png" width="500" height="250"> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7gg2O%2FbtsJ1GC5sNQ%2FWjdcKNW11XxsX3G3UXXhc1%2Fimg.png" width="500" height="250"> |
-<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/탐색피드.png?raw=true" width="500" height="250">
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9xjc2%2FbtsJ2mqqAbH%2FZQ0RFiaJw3UCc8PHpBs8g1%2Fimg.png" width="500" height="250"> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7gg2O%2FbtsJ1GC5sNQ%2FWjdcKNW11XxsX3G3UXXhc1%2Fimg.png" width="500" height="250">
+
 <li>맞춤여행지들이 추천되고, 핫플여행지, 지역별 여행지, 축제 정보등을 표시합니다.
 </li>
+
+### 개인 여행 성향별, 좋아요 별 맞춤 피드 추천
+<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/탐색피드.png?raw=true" width="500" height="250">
+
+<ul>
+  <li>탐색페이지에서 자신의 여행유형과 좋아요한 피드들을 기준으로 여행지가 추천됩니다.
+</ul>
 
 ### 다른 사용자의 피드 검색 기능
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FpUasD%2FbtsJ3a4g4i6%2FNJKj48q16olfBKvwD2OQ01%2Fimg.png" width="500" height="250"> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9rBwM%2FbtsJ178slZS%2FTDDXJf7eQcQBg8TdAFL5a1%2Fimg.png" width="400" height="150">
 <br>
 <ul>
-  <li>탐색페이지에서 자신의 여행유형과 좋아요한 피드들을 기준으로 여행지가 추천됩니다.
   <li>이 탐색페이지는 자신과 비슷한 유형의 사용자가 좋아요한 피드위주로 추천됩니다.
   <li>사용자 검색 후 팔로우 기능을 할 수 있고, 피드검색도 가능합니다.
 </ul>
@@ -132,16 +138,16 @@
 ## 🚩핵심 기능
 
 <ol>
-  <li>Kafka, Hadoop, Spark를 통한 주기적인 피드 추천 적용
+  <li>Hadoop, Spark, Redis를 통한 주기적인 피드 추천 적용
     <ul>
-      <li>배치 처리: Cron을 활용하여 정기적인 배치 처리로 피드 추천 시스템을 실행합니다.</li>
-      <li>협업 필터링: 사용자 기반 협업 필터링을 적용하며, 좋아요 이벤트에 시간 가중치와 사용자 특성을 반영하여 추천 품질을 향상시켰습니다.</li>
+      <li>배치 처리: Cron을 활용하여 2분마다 배치 처리로 유사도 계산을 실행합니다.</li>
+      <li>협업 필터링: 사용자 기반 협업 필터링을 적용하며, 좋아요 이벤트에 시간 가중치와 여행 유형별 특성을 반영하여 추천 품질을 향상시켰습니다.</li>
       <li>추천 캐싱: 추천된 피드는 Redis에 캐싱되어, 빠른 응답성을 위해 TTL을 적용하고 있습니다.</li>
     </ul>
   </li>
   <li>Kafka를 통한 최근 활동 사용자 수집
     <ul>
-      <li>추천 최적화: 최근에 활동한 사용자만을 대상으로 추천 피드를 생성하여, 불필요한 계산을 줄이고 효율적인 추천 기능을 제공합니다.</li>
+      <li>추천 최적화: 신규 좋아요 이벤트에 영향을 받는 사용자만을 추출하여 유사도 계산을 수행합니다. 불필요한 계산을 줄이고 효율적인 추천 기능을 제공합니다.</li>
     </ul>
   </li>
   <li>WebSocket을 활용한 실시간 채팅
