@@ -1,6 +1,8 @@
 # 🍳 여행한담
-<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/메인페이지.png?raw=true">
+<img src="https://github.com/sangmin0806/Trip_Handam/blob/main/exec/images/메인페이지.png?raw=true" width="1000" height="700">>
+
 ## 🗓️ 프로젝트 개요
+
 ## 📢 서비스 소개
 
 [📎 서비스 소개 UCC](https://youtube.com/shorts/xfRjP9bi9n4)
