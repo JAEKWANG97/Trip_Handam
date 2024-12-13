@@ -17,7 +17,7 @@
 | 고도연 | 강동형 | 고충원 | 김민주 | 유재광 | 이상민 |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: |
 | <img src="https://avatars.githubusercontent.com/u/156388715?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/156388917?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/156388848?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/87603324?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/65598179?v=4" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/134148399?v=4" width="100" height="100"> |
-| PM, FE | FE | FE | BE, Infra, AI | BE | BE |
+| PM, FE | FE | FE | BE, Infra, AI | BE | BE, BE Leader |
 
 
 
