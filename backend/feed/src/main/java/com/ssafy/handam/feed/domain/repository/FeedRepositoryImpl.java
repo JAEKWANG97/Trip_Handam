@@ -25,7 +25,6 @@ public class FeedRepositoryImpl implements FeedRepository {
     private final FeedElasticsearchRepository feedElasticsearchRepository;
 
     @Override
-//    @Lock(LockModeType.PESSIMISTIC_WRITE)
     public Optional<Feed> findById(Long id) {
         return feedJpaRepository.findById(id);
     }

@@ -127,16 +127,6 @@ public class FeedController {
         return success(feedService.getCreatedFeedsByUser(userId, pageable, token));
     }
 
-    @PostMapping("/liked/{feedId}")
-    public void test(@PathVariable Long feedId, @RequestParam Long userId) {
-        likeService.sendLikeEvent(feedId, userId, "CRKP");
-    }
-
-    @PostMapping("/hadoopTest")
-    public void hadoopTest(@RequestPart("image") MultipartFile imageFile) {
-        feedService.saveImage(imageFile);
-    }
-
     @PostMapping("/{feedId}/comments")
     public ApiResult<CreateCommentResponse> createComment(
             @CookieValue(name = "accessToken", required = false) String accessToken,

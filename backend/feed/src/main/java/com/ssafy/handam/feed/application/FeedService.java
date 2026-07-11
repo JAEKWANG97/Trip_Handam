@@ -52,6 +52,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.retry.annotation.Backoff;
@@ -146,17 +147,30 @@ public class FeedService {
         return "https://j11c205a.p.ssafy.io/images/" + fileName;
     }
 
+    /**
+     * 동시에 같은 피드에 좋아요가 몰리면 낙관적 락(@Version) 충돌이 발생할 수 있으므로,
+     * 충돌 시 새로운 트랜잭션에서 재시도한다.
+     * (spring-retry의 advisor order 기본값은 LOWEST_PRECEDENCE - 1로,
+     * 트랜잭션 advisor(LOWEST_PRECEDENCE)보다 바깥에서 감싸므로 재시도마다 새 트랜잭션이 열린다.)
+     */
     @Retryable(
-            maxAttempts = 30,
-            backoff = @Backoff(delay = 1000)
+            retryFor = OptimisticLockingFailureException.class,
+            maxAttempts = 5,
+            backoff = @Backoff(delay = 50, multiplier = 2.0, random = true)
     )
-//    @Transactional
+    @Transactional
     public FeedLikeResponse likeFeed(Long feedId, Long userId) {
         int likeCount = feedDomainService.likeFeed(feedId, userId);
         updateLikeCountInElasticsearch(feedId, likeCount);
         return FeedLikeResponse.of(feedId, true, likeCount);
     }
 
+    @Retryable(
+            retryFor = OptimisticLockingFailureException.class,
+            maxAttempts = 5,
+            backoff = @Backoff(delay = 50, multiplier = 2.0, random = true)
+    )
+    @Transactional
     public FeedLikeResponse unlikeFeed(Long feedId, Long userId) {
         int likeCount = feedDomainService.unlikeFeed(feedId, userId);
         updateLikeCountInElasticsearch(feedId, likeCount);
@@ -246,8 +260,7 @@ public class FeedService {
         String accessToken = nearByClusterCenterServiceReuqest.token();
 
         Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "likeCount"));
-//        String distanceString = distance + "km";
-        String distanceString = 5 + "km";
+        String distanceString = distance + "km";
         Page<FeedDocument> nearbyClusterCenter = feedDomainService.getNearbyClusterCenter(latitude, longitude,
                 distanceString, pageable);
         UserDto userDto = userApiClient.getUserByToken(accessToken);

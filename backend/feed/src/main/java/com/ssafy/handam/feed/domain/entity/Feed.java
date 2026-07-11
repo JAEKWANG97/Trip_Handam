@@ -22,8 +22,8 @@ public class Feed extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @Version
-//    private Long version;
+    @Version
+    private Long version;
 
     private String placeName;
     private Long totalPlanId;

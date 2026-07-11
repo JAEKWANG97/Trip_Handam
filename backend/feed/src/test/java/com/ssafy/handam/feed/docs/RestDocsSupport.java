@@ -5,11 +5,15 @@ import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.docu
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ssafy.handam.feed.application.CommentService;
 import com.ssafy.handam.feed.application.FeedService;
+import com.ssafy.handam.feed.application.LikeService;
+import com.ssafy.handam.feed.infrastructure.elasticsearch.FeedElasticsearchRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.restdocs.RestDocumentationContextProvider;
 import org.springframework.restdocs.RestDocumentationExtension;
 import org.springframework.test.context.ActiveProfiles;
@@ -35,6 +39,19 @@ public abstract class RestDocsSupport {
 
     @MockBean
     protected CommentService commentService;
+
+    @MockBean
+    protected LikeService likeService;
+
+    // 외부 인프라(Elasticsearch, Kafka)는 문서화 테스트에서 연결하지 않도록 mock 처리한다.
+    @MockBean
+    private FeedElasticsearchRepository feedElasticsearchRepository;
+
+    @MockBean
+    private ElasticsearchOperations elasticsearchOperations;
+
+    @MockBean
+    private KafkaTemplate<String, String> kafkaTemplate;
 
     @BeforeEach
     void setUp(WebApplicationContext webApplicationContext, RestDocumentationContextProvider restDocumentation) {

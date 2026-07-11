@@ -3,6 +3,8 @@ package com.ssafy.handam.feed.presentation.api.feed;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
+
+import java.util.Optional;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -18,6 +20,8 @@ import com.ssafy.handam.feed.domain.repository.LikeRepository;
 import com.ssafy.handam.feed.infrastructure.client.Gender;
 import com.ssafy.handam.feed.infrastructure.client.UserApiClient;
 import com.ssafy.handam.feed.infrastructure.client.dto.UserDto;
+import com.ssafy.handam.feed.infrastructure.elasticsearch.FeedDocument;
+import com.ssafy.handam.feed.infrastructure.elasticsearch.FeedElasticsearchRepository;
 import com.ssafy.handam.feed.infrastructure.jpa.FeedJpaRepository;
 import com.ssafy.handam.feed.infrastructure.jpa.LikeJpaRepository;
 import org.junit.jupiter.api.AfterEach;
@@ -28,7 +32,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.http.MediaType;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,6 +62,16 @@ class FeedControllerIntegrationTest extends IntegrationTestSupport {
     @MockBean
     private UserApiClient userApiClient;
 
+    // 외부 인프라(Elasticsearch, Kafka)는 테스트에서 연결하지 않도록 mock 처리한다.
+    @MockBean
+    private FeedElasticsearchRepository feedElasticsearchRepository;
+
+    @MockBean
+    private ElasticsearchOperations elasticsearchOperations;
+
+    @MockBean
+    private KafkaTemplate<String, String> kafkaTemplate;
+
     @Autowired
     private FeedService feedService;
 
@@ -80,6 +96,11 @@ class FeedControllerIntegrationTest extends IntegrationTestSupport {
 
         UserDto mockUserDto = createUserDto();
         when(userApiClient.getUserById(anyLong(), any())).thenReturn(mockUserDto);
+
+        // 좋아요/좋아요 취소 시 Elasticsearch 문서의 likeCount 갱신 경로를 스텁으로 대체한다.
+        when(feedElasticsearchRepository.findById(anyLong()))
+                .thenAnswer(invocation -> Optional.of(
+                        FeedDocument.builder().id(invocation.getArgument(0)).build()));
     }
 
     @AfterEach
